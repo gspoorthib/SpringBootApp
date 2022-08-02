@@ -2,7 +2,10 @@ package com.cg.dto;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Range;
+
+//import org.hibernate.validator.constraints.Range;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +13,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 public class PersonDto {
+	
+	
+	private int id;
 	@NotBlank(message="Name should not be blank")
 	private String name;
 //	@NotEmpty

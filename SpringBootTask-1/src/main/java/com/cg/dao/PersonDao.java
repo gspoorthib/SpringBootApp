@@ -15,4 +15,6 @@ public interface PersonDao {
 
 	public PersonDto getPersonByName(String name);
 
+	public PersonDto getPersonById(int id);
+
 }

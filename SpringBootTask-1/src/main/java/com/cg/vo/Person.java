@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
+	
+	private int id;
 	@NotBlank(message="Name should not be blank")
 	private String name;
 	//@NotBlank

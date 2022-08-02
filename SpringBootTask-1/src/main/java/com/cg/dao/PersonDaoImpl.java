@@ -22,6 +22,7 @@ public class PersonDaoImpl implements PersonDao {
 	
 	private RowMapper<PersonDto> rowMapper =(ResultSet rs, int rowNumber)->{
 		PersonDto persondto = new PersonDto();
+		persondto.setName(rs.getString("id"));
 		persondto.setName(rs.getString("name"));
 		persondto.setAge(rs.getInt("age"));
 		persondto.setCity(rs.getString("city"));
@@ -59,6 +60,11 @@ public class PersonDaoImpl implements PersonDao {
 	public PersonDto getPersonByName(String name) {
 		// TODO Auto-generated method stub
 		return jdbcTemplate.queryForObject("Select * from Person where Name=?",/*new BeanPropertyRowMapper<PersonDto>(PersonDto.class)*/rowMapper,name);
+	}
+	@Override
+	public PersonDto getPersonById(int id) {
+		// TODO Auto-generated method stub
+		return jdbcTemplate.queryForObject("Select * from Person where id=?",/*new BeanPropertyRowMapper<PersonDto>(PersonDto.class)*/rowMapper,id);
 	}
 	
 	

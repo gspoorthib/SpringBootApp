@@ -30,6 +30,15 @@ public class PersonBoImpl implements PersonBo {
 		logger.info("Fetch details of person in BO layer");
 		return personEo.getPersons();
 	}
+	
+	@Override
+	public PersonDto getPersonById(int id) {
+		// TODO Auto-generated method stub
+		logger.info("Fetch the details of person by id in BO layer");
+		return personEo.getPersonById(id);
+	}
+	
+	
 
 	@Override
 	public PersonDto getPersonByAge(int age) {
@@ -43,6 +52,7 @@ public class PersonBoImpl implements PersonBo {
 		// TODO Auto-generated method stub
 		return personEo.getPersonByName(name);
 	}
+
 	
 	
 

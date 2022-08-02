@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
 import org.springframework.stereotype.Component;
-//Automatically generated when we clean build the application we built,
-//present inside build-annotationprocessor-com-cg-mapper
+
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-07-13T03:32:33+0530",
+    date = "2022-08-02T16:31:33+0530",
     comments = "version: 1.5.2.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.4.1.jar, environment: Java 15.0.2 (Oracle Corporation)"
 )
 @Component

@@ -29,7 +29,14 @@ public class PersonEoImpl implements PersonEo {
 		logger.info("Fetch the details of person in eo layer");
 		return personDao.getPersons();
 	}
-
+	
+	@Override
+	public PersonDto getPersonById(int id) {
+		// TODO Auto-generated method stub
+		logger.info("Fetch the details of person by id in eo layer");
+		return personDao.getPersonById(id);
+	}
+	
 	@Override
 	public PersonDto getPersonByAge(int age) {
 		// TODO Auto-generated method stub
@@ -42,6 +49,7 @@ public class PersonEoImpl implements PersonEo {
 		// TODO Auto-generated method stub
 		return personDao.getPersonByName(name);
 	}
+
 	
 	
 

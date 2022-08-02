@@ -12,10 +12,14 @@ public interface PersonService {
 	public Person insertPerson( Person person);
 
 	public List<Person> getPersons();
+	
+	public Person getPersonById(int id);
 
 	public Person getPersonByAge(int age);
 
 	public Person getPersonByName(String name);
+
+	
 
 	
 
