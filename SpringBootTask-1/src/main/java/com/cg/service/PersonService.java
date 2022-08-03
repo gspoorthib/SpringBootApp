@@ -13,8 +13,6 @@ public interface PersonService {
 
 	public List<Person> getPersons();
 	
-	public Person getPersonById(int id);
-
 	public Person getPersonByAge(int age);
 
 	public Person getPersonByName(String name);

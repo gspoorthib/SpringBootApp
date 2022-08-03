@@ -31,13 +31,6 @@ public class PersonEoImpl implements PersonEo {
 	}
 	
 	@Override
-	public PersonDto getPersonById(int id) {
-		// TODO Auto-generated method stub
-		logger.info("Fetch the details of person by id in eo layer");
-		return personDao.getPersonById(id);
-	}
-	
-	@Override
 	public PersonDto getPersonByAge(int age) {
 		// TODO Auto-generated method stub
 		logger.info("Fetch the details of person by age in eo layer");

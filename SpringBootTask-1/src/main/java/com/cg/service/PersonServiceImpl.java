@@ -40,14 +40,6 @@ public class PersonServiceImpl implements PersonService {
 	}
 	
 	@Override
-	public Person getPersonById(int id) {
-		logger.info("Fetch details of person by id in service layer");
-		return personMapper.convertToVo(personBo.getPersonById(id));
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public Person getPersonByAge(int age) {
 		// TODO Auto-generated method stub
 		logger.info("Fetch details of person by age in service layer");

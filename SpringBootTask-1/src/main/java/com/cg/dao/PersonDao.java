@@ -11,8 +11,6 @@ public interface PersonDao {
 
 	public List<PersonDto> getPersons();
 	
-	public PersonDto getPersonById(int id);
-
 	public PersonDto getPersonByAge(int age);
 
 	public PersonDto getPersonByName(String name);

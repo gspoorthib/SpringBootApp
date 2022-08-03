@@ -32,15 +32,6 @@ public class PersonBoImpl implements PersonBo {
 	}
 	
 	@Override
-	public PersonDto getPersonById(int id) {
-		// TODO Auto-generated method stub
-		logger.info("Fetch the details of person by id in BO layer");
-		return personEo.getPersonById(id);
-	}
-	
-	
-
-	@Override
 	public PersonDto getPersonByAge(int age) {
 		// TODO Auto-generated method stub
 		logger.info("Fetch the details of person by age in BO layer");

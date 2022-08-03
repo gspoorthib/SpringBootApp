@@ -39,13 +39,6 @@ public class PersonController {
 		return service.getPersons();
 	}
 	
-	@GetMapping(path="/getpersonbyid/{id}")
-	public Person getPersonById(@PathVariable int id) {
-		logger.info("Fetch the details of person by id from controller");
-		return service.getPersonById(id);
-		
-	}
-	
 	@GetMapping(path="/getpersons/{age}")
 	public Person getPersonByAge(@PathVariable int age) {
 		logger.info("Fetch the details of person by age from controller");

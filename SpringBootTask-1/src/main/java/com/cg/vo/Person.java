@@ -14,9 +14,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
-	
-	
-	private int id;
 	@NotBlank(message="Name should not be blank")
 	private String name;
 	//@NotBlank
@@ -26,12 +23,6 @@ public class Person {
 	//@NotEmpty(message="City name should not be empty")
 	private String city;
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	public String getName() {
 		return name;
 	}
@@ -50,19 +41,20 @@ public class Person {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	/*public Person() {
-		super();
+	//public Person() {
+	//	super();
 		// TODO Auto-generated constructor stub
-	}
-	public Person(String name, int age, String city) {
-		super();
-		this.name = name;
-		this.age = age;
-		this.city = city;
-	}
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", city=" + city + "]";
-	}*/
+	//}
 	
+	//	public Person(String name, int age, String city) {
+	//		super();
+	//		
+	//		this.name = name;
+	//		this.age = age;
+	//		this.city = city;
+	//	}
+	//	@Override
+	//	public String toString() {
+	//		return "Person [ name=" + name + ", age=" + age + ", city=" + city + "]";
+	//	}
 }

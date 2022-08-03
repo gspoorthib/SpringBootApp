@@ -13,24 +13,13 @@ import lombok.Data;
 
 @Data
 public class PersonDto {
-	
-	
-	private int id;
 	@NotBlank(message="Name should not be blank")
 	private String name;
-//	@NotEmpty
+	//@NotEmpty
 	//@Size(min=2,max=50,message="age should be lessthan or equal to 50")
 	private int age;
 	@NotEmpty
 	private String city;
-	
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	public String getName() {
 		return name;
 	}
@@ -49,19 +38,24 @@ public class PersonDto {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public PersonDto() {
+	/*public PersonDto( @NotBlank(message = "Name should not be blank") String name, int age,
+			@NotEmpty String city) {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-	/*public PersonDto( String name, int age, String city) {
-		super();
+		
 		this.name = name;
 		this.age = age;
 		this.city = city;
+	}
+	public PersonDto() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
 		return "PersonDto [name=" + name + ", age=" + age + ", city=" + city + "]";
 	}*/
+	
+	
+	
 	
 }
