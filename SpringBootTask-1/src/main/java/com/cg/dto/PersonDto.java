@@ -3,13 +3,13 @@ package com.cg.dto;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 
-import org.hibernate.validator.constraints.Range;
+
 
 //import org.hibernate.validator.constraints.Range;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 @Data
 public class PersonDto {
@@ -24,6 +24,13 @@ public class PersonDto {
 	@NotEmpty
 	private String city;
 	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}

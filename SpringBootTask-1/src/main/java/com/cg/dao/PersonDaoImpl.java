@@ -22,7 +22,7 @@ public class PersonDaoImpl implements PersonDao {
 	
 	private RowMapper<PersonDto> rowMapper =(ResultSet rs, int rowNumber)->{
 		PersonDto persondto = new PersonDto();
-		persondto.setName(rs.getString("id"));
+		persondto.setId(rs.getInt("id"));
 		persondto.setName(rs.getString("name"));
 		persondto.setAge(rs.getInt("age"));
 		persondto.setCity(rs.getString("city"));
@@ -32,7 +32,7 @@ public class PersonDaoImpl implements PersonDao {
 	//@Autowired
 	//private PersonMapper personMapper;
 	
-	//private static final String INSERT_PERSON_QUERY="Insert into Person(NAME,AGE,CITY) values(?,?,?)";
+	//private static final String INSERT_PERSON_QUERY="Insert into Person(ID,NAME,AGE,CITY,) values(?,?,?,?)";
 	//private static final String GET_PERSON_QUERY="Select * from Person";
 	//private static final String GET_PERSON_BY_AGE_QUERY="Select * from Person where AGE=?";
 	//private static final String GET_PERSON_BY_NAME_QUERY="Select * from Person where Name=?";
@@ -40,7 +40,7 @@ public class PersonDaoImpl implements PersonDao {
 	@Override
 	public PersonDto insertPerson(PersonDto persondto) {
 		// TODO Auto-generated method stub
-		jdbcTemplate.update("Insert into Person(NAME,AGE,CITY) values(?,?,?)",persondto.getName(),persondto.getAge(),persondto.getCity());	
+		jdbcTemplate.update("Insert into Person(id, name,age,city) values(?,?,?,?)",persondto.getId(),persondto.getName(),persondto.getAge(),persondto.getCity());	
 		return  persondto;
 		
 	}
@@ -54,7 +54,7 @@ public class PersonDaoImpl implements PersonDao {
 	@Override
 	public PersonDto getPersonByAge(int age) {
 		// TODO Auto-generated method stub
-		return jdbcTemplate.queryForObject("Select * from Person where AGE=?",rowMapper/*new BeanPropertyRowMapper<PersonDto>(PersonDto.class)*/,age);
+		return jdbcTemplate.queryForObject("Select * from Person where Age=?",rowMapper/*new BeanPropertyRowMapper<PersonDto>(PersonDto.class)*/,age);
 	}
 	@Override
 	public PersonDto getPersonByName(String name) {
@@ -64,7 +64,7 @@ public class PersonDaoImpl implements PersonDao {
 	@Override
 	public PersonDto getPersonById(int id) {
 		// TODO Auto-generated method stub
-		return jdbcTemplate.queryForObject("Select * from Person where id=?",/*new BeanPropertyRowMapper<PersonDto>(PersonDto.class)*/rowMapper,id);
+		return jdbcTemplate.queryForObject("Select * from Person where Id=?",/*new BeanPropertyRowMapper<PersonDto>(PersonDto.class)*/rowMapper,id);
 	}
 	
 	
